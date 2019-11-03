@@ -40,6 +40,7 @@ return [
     'password'        => '1234',
     'whitelist'       => [
         'localhost',
+        '73.179.52.188'
     ],
     'language'        => 'en',
     'timezone'        => 'America/New_York',
