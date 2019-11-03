@@ -1,3 +1,0 @@
-[submodule "admin/--force"]
-	path = admin/--force
-	url = https://github.com/PeeHaa/OpCacheGUI.git
