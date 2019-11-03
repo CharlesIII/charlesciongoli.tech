@@ -46,5 +46,5 @@ return [
     'error_reporting' => E_ALL,
     'display_errors'  => 'Off',
     'log_errors'      => 'On',
-    'uri_scheme'      => Router::URL_REWRITE
+    'uri_scheme'      => Router::QUERY_STRING
 ];
