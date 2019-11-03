@@ -31,7 +31,7 @@ return [
     'session' => [
         'save' => 'redis',
         'redis' => [
-            'host' => '127.0.0.1',
+            'host' => '10.1.96.8',
             'port' => '6379',
             'password' => '',
             'timeout' => '2.5',
