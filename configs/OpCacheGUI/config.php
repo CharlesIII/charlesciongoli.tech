@@ -37,9 +37,8 @@ use OpCacheGUI\Network\Router;
  */
 return [
     'username'        => 'c3',
-    'password'        => '$2y$10$eskUs/eDP3AN1X246ccME.u0FsbEOy8U3fNebGNEzAqRNswx70/VS',
+    'password'        => '$2y$12$kU208E6HiVvjD7dp/Xal/ehpw571g9YSJd.8KSdBzX1ePhMerfwLi',
     'whitelist'       => [
-        'localhost',
         '*'
     ],
     'language'        => 'en',
