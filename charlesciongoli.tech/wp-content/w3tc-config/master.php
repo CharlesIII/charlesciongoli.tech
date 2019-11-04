@@ -8,8 +8,8 @@
     "cluster.messagebus.sns.topic_arn": "",
     "dbcache.configuration_overloaded": false,
     "dbcache.debug": false,
-    "dbcache.enabled": false,
-    "dbcache.engine": "file",
+    "dbcache.enabled": true,
+    "dbcache.engine": "redis",
     "dbcache.file.gc": 3600,
     "dbcache.file.locking": false,
     "dbcache.lifetime": 180,
@@ -57,11 +57,11 @@
         "\\bfound_rows\\(\\)"
     ],
     "objectcache.configuration_overloaded": false,
-    "objectcache.enabled": false,
+    "objectcache.enabled": true,
     "objectcache.debug": false,
     "objectcache.enabled_for_wp_admin": true,
     "objectcache.fallback_transients": true,
-    "objectcache.engine": "file",
+    "objectcache.engine": "redis",
     "objectcache.file.gc": 3600,
     "objectcache.file.locking": false,
     "objectcache.memcached.servers": [
@@ -98,10 +98,10 @@
     "objectcache.lifetime": 180,
     "objectcache.purge.all": false,
     "pgcache.configuration_overloaded": false,
-    "pgcache.enabled": false,
+    "pgcache.enabled": true,
     "pgcache.comment_cookie_ttl": 1800,
     "pgcache.debug": false,
-    "pgcache.engine": "file_generic",
+    "pgcache.engine": "redis",
     "pgcache.file.gc": 3600,
     "pgcache.file.nfs": false,
     "pgcache.file.locking": false,
@@ -226,10 +226,10 @@
     "stats.access_log.format": "$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"",
     "stats.access_log.webserver": "nginx",
     "minify.configuration_overloaded": false,
-    "minify.enabled": false,
+    "minify.enabled": true,
     "minify.auto": true,
     "minify.debug": false,
-    "minify.engine": "file",
+    "minify.engine": "redis",
     "minify.error.notification": "",
     "minify.file.gc": 86400,
     "minify.file.nfs": false,
@@ -493,7 +493,9 @@
     "varnish.configuration_overloaded": false,
     "varnish.enabled": false,
     "varnish.debug": false,
-    "varnish.servers": [],
+    "varnish.servers": [
+        ""
+    ],
     "browsercache.configuration_overloaded": false,
     "browsercache.enabled": true,
     "browsercache.rewrite": false,
@@ -849,5 +851,8 @@
     },
     "extensions.active_frontend": [],
     "plugin.license_key": "",
-    "plugin.type": ""
+    "plugin.type": "",
+    "fragmentcache": {
+        "engine": "redis"
+    }
 }
