@@ -3,13 +3,13 @@
 # Main Folders
 chown www-data:www-data admin
 chmod 755 admin
-chown www-data:www-data magento2
-chmod 755 magento2
-chown www-data:www-data mainsite
-chmod 755 mainsite
+chown www-data:www-data magento.charlesciongoli.tech
+chmod 755 magento.charlesciongoli.tech
+chown www-data:www-data charlesciongoli.tech
+chmod 755 charlesciongoli.tech
 
 # Magento
-cd magento2
+cd magento.charlesciongoli.tech
 chown -R www-data:www-data .
 find . -type f -exec chmod 644 {} \;
 find . -type d -exec chmod 755 {} \;
@@ -24,7 +24,7 @@ chmod u+x bin/magento
 cd ..
 
 # Wordpress
-cd mainsite
+cd charlesciongoli.tech
 chown -R www-data:www-data .
 find . -type f -exec chmod 644 {} \;
 find . -type d -exec chmod 755 {} \;
