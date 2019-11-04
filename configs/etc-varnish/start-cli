@@ -1,0 +1,6 @@
+vcl.load vcl-wordpress-orig /etc/varnish/charlesciongoli.tech.vcl
+vcl.load vcl-magento-orig /etc/varnish/magento.charlesciongoli.tech.vcl
+vcl.label label-wordpress vcl-wordpress-orig
+vcl.label label-magento vcl-magento-orig
+vcl.load vcl-root-orig /etc/varnish/root.vcl
+vcl.use vcl-root-orig
