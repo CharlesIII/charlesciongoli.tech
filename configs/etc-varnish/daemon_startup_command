@@ -1,0 +1,1 @@
+varnishd -I start.cli -F -a :80 -f ''
