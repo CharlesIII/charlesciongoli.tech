@@ -226,7 +226,7 @@
     "stats.access_log.format": "$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"",
     "stats.access_log.webserver": "nginx",
     "minify.configuration_overloaded": false,
-    "minify.enabled": true,
+    "minify.enabled": false,
     "minify.auto": true,
     "minify.debug": false,
     "minify.engine": "redis",
@@ -491,10 +491,10 @@
     "cdnfsd.stackpath2.domain": [],
     "cdnfsd.stackpath2.ssl": "auto",
     "varnish.configuration_overloaded": false,
-    "varnish.enabled": false,
+    "varnish.enabled": true,
     "varnish.debug": false,
     "varnish.servers": [
-        ""
+        "10.1.96.7"
     ],
     "browsercache.configuration_overloaded": false,
     "browsercache.enabled": true,
