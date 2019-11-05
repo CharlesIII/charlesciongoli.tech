@@ -6,7 +6,7 @@ import directors;
 
 backend server1 { # Define one backend
   .host = "10.1.96.5";    # IP or Hostname of backend
-  .port = "8080";           # Port Apache or whatever is listening
+  .port = "8081";           # Port Apache or whatever is listening
   .max_connections = 300; # That's it
 
   .probe = {
@@ -14,7 +14,7 @@ backend server1 { # Define one backend
     # We prefer to only do a HEAD /
     .request =
       "HEAD / HTTP/1.1"
-      "Host: localhost"
+      "Host: charlesciongoli.tech"      # BE SURE TO PUT YOUR HOSTNAME HERE
       "Connection: close"
       "User-Agent: Varnish Health Probe";
 
@@ -278,7 +278,7 @@ sub vcl_pass {
   # backend's response is passed on to the client, but is not entered into the cache. Subsequent
   # requests submitted over the same client connection are handled normally.
 
-  #return (pass);
+  return (fetch);
 }
 
 # The data on which the hashing will take place

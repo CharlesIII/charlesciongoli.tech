@@ -1,4 +1,7 @@
 <?php
+/**Enable HTTPS if behind Varnish**/
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https'){ $_SERVER['HTTPS']='on'; }
+
 /** Enable W3 Total Cache */
 define('WP_CACHE', true); // Added by W3 Total Cache
 
@@ -91,4 +94,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once( ABSPATH . 'wp-settings.php' );
-
