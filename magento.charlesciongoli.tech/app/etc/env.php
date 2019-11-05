@@ -61,7 +61,7 @@ return [
                 'id_prefix' => '40d_',
                 'backend' => 'Cm_Cache_Backend_Redis',
                 'backend_options' => [
-                    'server' => '127.0.0.1',
+                    'server' => '10.1.96.8',
                     'database' => '0',
                     'port' => '6379',
                     'password' => '',
@@ -73,7 +73,7 @@ return [
                 'id_prefix' => '40d_',
                 'backend' => 'Cm_Cache_Backend_Redis',
                 'backend_options' => [
-                    'server' => '127.0.0.1',
+                    'server' => '10.1.96.8',
                     'database' => '1',
                     'port' => '6379',
                     'password' => '',
@@ -110,7 +110,7 @@ return [
     'downloadable_domains' => [
         '127.0.0.1',
         '108.61.128.122',
-        'c3.my.to'
+        'magento.charlesciongoli.tech'
     ],
     'install' => [
         'date' => 'Fri, 01 Nov 2019 18:17:15 +0000'
