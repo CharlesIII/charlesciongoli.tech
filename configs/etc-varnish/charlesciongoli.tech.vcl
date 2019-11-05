@@ -120,11 +120,6 @@ sub vcl_recv {
 		return (pass);
 	}
 
-  #Let's look up the country they are in, might come in useful for localization
-  if (!req.http.X-Country-Code) {
-    set req.http.X-Country-Code = geoip.lookup(client.ip);
-  }
-
 	# Wordpress: don't cache users who are logged-in or on password-protected pages
 	if (req.http.Cookie ~ "wordpress_logged_in_|resetpass|wp-postpass_") {
 		return(pass);
@@ -307,12 +302,6 @@ sub vcl_hash {
   # Cache the HTTP vs HTTPs separately
   if (req.http.X-Forwarded-Proto) {
     hash_data(req.http.X-Forwarded-Proto);
-  }
-
-  # if there is a country code attached from GeoIP lookup
-  # could be useful for localization
-  if (req.http.X-Country-Code) {
-    hash_data(req.http.X-Country-Code);
   }
 
   return (lookup);
