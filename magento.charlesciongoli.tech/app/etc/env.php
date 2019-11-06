@@ -58,7 +58,7 @@ return [
     'cache' => [
         'frontend' => [
             'default' => [
-                'id_prefix' => '40d_',
+                'id_prefix' => 'fd9_',
                 'backend' => 'Cm_Cache_Backend_Redis',
                 'backend_options' => [
                     'server' => '10.1.96.8',
@@ -70,7 +70,7 @@ return [
                 ]
             ],
             'page_cache' => [
-                'id_prefix' => '40d_',
+                'id_prefix' => 'fd9_',
                 'backend' => 'Cm_Cache_Backend_Redis',
                 'backend_options' => [
                     'server' => '10.1.96.8',
@@ -114,5 +114,11 @@ return [
     ],
     'install' => [
         'date' => 'Fri, 01 Nov 2019 18:17:15 +0000'
+    ],
+    'http_cache_hosts' => [
+        [
+            'host' => '10.1.96.7',
+            'port' => '6081'
+        ]
     ]
 ];

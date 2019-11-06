@@ -22,10 +22,10 @@
     "dbcache.memcached.password": "",
     "dbcache.redis.persistent": true,
     "dbcache.redis.servers": [
-        "127.0.0.1:6379"
+        "10.1.96.8:6379"
     ],
     "dbcache.redis.password": "",
-    "dbcache.redis.dbid": 0,
+    "dbcache.redis.dbid": 5,
     "dbcache.use_filters": false,
     "dbcache.reject.constants": [
         "APP_REQUEST",
@@ -42,7 +42,9 @@
         "_wp_session_",
         "_wc_session_"
     ],
-    "dbcache.reject.uri": [],
+    "dbcache.reject.uri": [
+        ""
+    ],
     "dbcache.reject.words": [
         "^\\s*insert\\b",
         "^\\s*delete\\b",
@@ -73,10 +75,10 @@
     "objectcache.memcached.password": "",
     "objectcache.redis.persistent": true,
     "objectcache.redis.servers": [
-        "127.0.0.1:6379"
+        "10.1.96.8:6379"
     ],
     "objectcache.redis.password": "",
-    "objectcache.redis.dbid": 0,
+    "objectcache.redis.dbid": 6,
     "objectcache.groups.global": [
         "users",
         "userlogins",
@@ -115,10 +117,10 @@
     "pgcache.memcached.password": "",
     "pgcache.redis.persistent": true,
     "pgcache.redis.servers": [
-        "127.0.0.1:6379"
+        "10.1.96.8:6379"
     ],
     "pgcache.redis.password": "",
-    "pgcache.redis.dbid": 0,
+    "pgcache.redis.dbid": 3,
     "pgcache.cache.query": false,
     "pgcache.cache.home": true,
     "pgcache.cache.feed": false,
@@ -144,24 +146,40 @@
         "wp-links-opml.php",
         "wp-locations.php"
     ],
-    "pgcache.accept.qs": [],
+    "pgcache.accept.qs": [
+        ""
+    ],
     "pgcache.late_init": false,
     "pgcache.late_caching": false,
     "pgcache.mirrors.enabled": false,
-    "pgcache.mirrors.home_urls": [],
+    "pgcache.mirrors.home_urls": [
+        ""
+    ],
     "pgcache.reject.front_page": false,
     "pgcache.reject.logged": true,
     "pgcache.reject.logged_roles": false,
-    "pgcache.reject.roles": [],
+    "pgcache.reject.roles": [
+        ""
+    ],
     "pgcache.reject.uri": [
         "wp-.*\\.php",
         "index\\.php"
     ],
-    "pgcache.reject.categories": [],
-    "pgcache.reject.tags": [],
-    "pgcache.reject.authors": [],
-    "pgcache.reject.custom": [],
-    "pgcache.reject.ua": [],
+    "pgcache.reject.categories": [
+        ""
+    ],
+    "pgcache.reject.tags": [
+        ""
+    ],
+    "pgcache.reject.authors": [
+        ""
+    ],
+    "pgcache.reject.custom": [
+        ""
+    ],
+    "pgcache.reject.ua": [
+        ""
+    ],
     "pgcache.reject.cookie": [
         "wptouch_switch_toggle"
     ],
@@ -183,7 +201,9 @@
         "rss2"
     ],
     "pgcache.purge.postpages_limit": 10,
-    "pgcache.purge.pages": [],
+    "pgcache.purge.pages": [
+        ""
+    ],
     "pgcache.purge.sitemap_regex": "([a-z0-9_\\-]*?)sitemap([a-z0-9_\\-]*)?\\.xml",
     "pgcache.prime.enabled": false,
     "pgcache.prime.interval": 900,
@@ -226,7 +246,7 @@
     "stats.access_log.format": "$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\"",
     "stats.access_log.webserver": "nginx",
     "minify.configuration_overloaded": false,
-    "minify.enabled": false,
+    "minify.enabled": true,
     "minify.auto": true,
     "minify.debug": false,
     "minify.engine": "redis",
@@ -243,10 +263,10 @@
     "minify.memcached.password": "",
     "minify.redis.persistent": true,
     "minify.redis.servers": [
-        "127.0.0.1:6379"
+        "10.1.96.8:6379"
     ],
     "minify.redis.password": "",
-    "minify.redis.dbid": 0,
+    "minify.redis.dbid": 4,
     "minify.rewrite": true,
     "minify.options": [],
     "minify.symlinks": [],
@@ -271,7 +291,7 @@
     "minify.css.embed": false,
     "minify.css.imports": "",
     "minify.css.groups": [],
-    "minify.js.http2push": false,
+    "minify.js.http2push": true,
     "minify.js.enable": true,
     "minify.js.engine": "js",
     "minify.js.combine.header": false,
@@ -317,10 +337,18 @@
     "minify.htmltidy.options.hide-comments": true,
     "minify.htmltidy.options.wrap": 0,
     "minify.reject.logged": false,
-    "minify.reject.ua": [],
-    "minify.reject.uri": [],
-    "minify.reject.files.js": [],
-    "minify.reject.files.css": [],
+    "minify.reject.ua": [
+        ""
+    ],
+    "minify.reject.uri": [
+        ""
+    ],
+    "minify.reject.files.js": [
+        ""
+    ],
+    "minify.reject.files.css": [
+        ""
+    ],
     "minify.cache.files": [
         ""
     ],
@@ -846,10 +874,13 @@
     "common.instance_id": 1362499068,
     "common.force_master": true,
     "extensions.active": {
-        "newrelic": "w3-total-cache\/Extension_NewRelic_Plugin.php",
-        "fragmentcache": "w3-total-cache\/Extension_FragmentCache_Plugin.php"
+        "cloudflare": "w3-total-cache\/Extension_CloudFlare_Plugin.php",
+        "fragmentcache": "w3-total-cache\/Extension_FragmentCache_Plugin.php",
+        "newrelic": "w3-total-cache\/Extension_NewRelic_Plugin.php"
     },
-    "extensions.active_frontend": [],
+    "extensions.active_frontend": {
+        "cloudflare": "*"
+    },
     "plugin.license_key": "",
     "plugin.type": "",
     "fragmentcache": {
